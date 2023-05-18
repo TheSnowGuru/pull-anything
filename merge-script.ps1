@@ -39,4 +39,4 @@ function Merge-PullRequests {
 }
 
 # Usage
-Merge-PullRequests -SourceRepo "mckaywrigley/chatbot-ui" -PrivateRepo "TheSnowGuru/speaq-chatui"
+Merge-PullRequests -SourceRepo "githubUser/repoToClone" -PrivateRepo "GithubUser/clonedRepo"
