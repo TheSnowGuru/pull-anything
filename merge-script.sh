@@ -32,4 +32,4 @@ function merge_pull_requests() {
 }
 
 # Usage
-merge_pull_requests "mckaywrigley/chatbot-ui" "TheSnowGuru/speaq-chatui"
+merge_pull_requests "userename/ClonedrepoName" "TheSnowGuru/YourLocal"
