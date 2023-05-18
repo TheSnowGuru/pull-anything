@@ -1,0 +1,21 @@
+name: Merge Pull Requests
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Merge PR
+        run: |
+          git fetch origin pull/${{ github.event.pull_request.number }}/head:pr${{ github.event.pull_request.number }}
+          git checkout ${{ github.head_ref }}
+          git merge pr${{ github.event.pull_request.number }}
+          git push origin ${{ github.head_ref }}
